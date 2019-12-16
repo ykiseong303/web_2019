@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      document.write("111");
+      var coworkers = {
+        "programmer" : "egoing",
+        "designer" : "leezhe"
+      };
+
+      document.write("111");
+      document.write("programmer : " + coworkers.programmer+"<br>");
+      document.write("designer : "+ coworkers.designer+"<br>");
+      coworkers.bookkeper = "aaa";
+      document.write("bookkeper : "+coworkers.bookkeper+"<br>");
+      coworkers["data scientist"] = "taeho";
+      document.write("data scientist : "+coworkers["data scientist"] +"<br>");
+
+    </script>
+
+    <h2>Iterator</h2>
+    <script type="text/javascript">
+      for(var key in coworkers) {
+        // coworkers에 있는 키값들을 하나하나 접근
+        document.write(key + "<br>");
+        document.write(coworkers[key] + "<br>");
+      }
+    </script>
+    <h2>method</h2>
+    <script type="text/javascript">
+      coworkers.showAll = function(){
+        for(var key in this) {
+          document.write(key+' : '+this[key] +'<br>');
+        }
+      }
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
